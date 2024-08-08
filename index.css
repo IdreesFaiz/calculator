@@ -1,0 +1,188 @@
+ *{
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+     font-family: sans-serif;
+ }
+ body{
+     justify-content: center;
+     display: flex;
+     align-items: center;
+     height: 100vh;
+     overflow: hidden;
+     width: 100%;
+     background: linear-gradient(-45deg,rgb(36, 9, 134),rgb(16, 129, 25));
+ }
+ .bub{
+     position: absolute;
+     display: flex;
+     width: 100%;
+     justify-content: space-around;
+     bottom: 100px;
+    z-index: -1;
+ }
+ .bub span{
+     height: 60px;
+     width: 60px;
+     background: rgba(255,255,255,0.1);
+     box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+     backdrop-filter: blur(5px);
+     animation: move 10s linear infinite;
+     position: relative;
+     overflow: hidden;
+ }
+ .bub span:before{
+     content: '';
+     position: absolute;
+     left: 0;
+     top: 0;
+     height: 60px;
+     width: 40%;
+     background: rgba(255,255,255,0.15);
+     transform: skew(45deg) translateX(150px);
+     animation: mirror 3s linear infinite;
+     overflow: hidden;
+ }
+
+
+
+@keyframes mirror{
+    100%{
+        transform: translateX(-450px);
+    }
+}
+.bub span.one:before{
+    animation-delay: 1s ;
+
+}
+.bub span.two:before{
+    animation-delay: 1.5s ;
+
+}
+.bub span.three:before{
+    animation-delay: 3s ;
+
+}
+.bub span.four:before{
+    animation-delay: 4s ;
+
+}
+.bub span.five:before{
+    animation-delay: 3.5s ;
+
+}.bub span.six:before{
+    animation-delay: 4.5s ;
+
+}
+.bub span.seven:before{
+    animation-delay: 0.5s ;
+
+}
+.bub span.eight:before{
+    animation-delay: 0.12s ;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ @keyframes move{
+     100%{
+         transform: translateY(-90vh);
+     }
+ }
+ .bub span.one{
+     animation-delay: 2.2s;
+     transform: scale(2.1S);
+ }
+ .bub span.two{
+    animation-delay: 3.5s;
+    transform: scale(1.5S);
+}
+.bub span.three{
+    animation-delay: 0.5s;
+    transform: scale(2S);
+}
+.bub span.four{
+    animation-delay: 2.5s;
+    transform: scale(3S);
+}
+.bub span.five{
+    animation-delay: 4s;
+    transform: scale(2s);
+}
+.bub span.six{
+    animation-delay: 6s;
+    transform: scale(0.5);
+}
+.bub span.seven{
+    animation-delay: 5s;
+    transform: scale(2.9S);
+}
+.bub span.eight{
+    animation-delay: 7s;
+    transform: scale(1.22S);
+}
+.cont{
+    padding: 15px;
+    width: 360px;
+    background-color:rgba(255,255,255,0.1) ;
+    border-radius: 12px;
+    backdrop-filter: (5px);
+    box-shadow: 0 20px 25px rgba(0,0,0,0.15);
+    border-top: 1px solid rgba(255,255,255,0.5);
+    border-left: 1px solid rgba(255,255,255,0.15);
+}
+.cont input[type="text"]{
+    width: 100%;
+    height: 100px;
+    margin: 0 5px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    padding-left: 10px;
+    color: #fff;
+    text-align: right;
+    background: transparent;
+
+}
+.cont input[type="button"]{
+height: 65px;
+color: #fff;
+width: calc(100% /4 - 5px);
+background: transparent;
+border-radius: 12px;
+margin-top: 12px;
+outline: none;
+border: none;
+font-size: 20px;
+cursor: pointer;
+}
+.cont input[type="button"]:hover{
+    background: rgba(255,255,255,0.1);
+
+
+
+}
+ 
+
+@media screen and (max-width: 400px) {
+ .seven,
+ .eight,
+ .six{
+    display: none;
+ }
+ .cont{
+    width: 95%;
+ }
+}
